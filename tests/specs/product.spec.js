@@ -6,20 +6,20 @@ const testConfig = require('../../testconfig');
 let loginPage;
 let productPage;
 
-// test.beforeAll(async ({ browser }) => {
-//   const context = await browser.newContext({ storageState: 'authentication/.auth/admin.json' });
-//   const page = await context.newPage();
-//   loginPage = new LoginPage(page);
-//   productPage = new ProductPage(page);
-// });
+test.beforeAll(async ({ browser }) => {
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  loginPage = new LoginPage(page);
+  productPage = new ProductPage(page);
+});
 
 // test('Login with valid credentials and verify title', async () => {
 //   await loginPage.gotoLoginPage("https://www.saucedemo.com/");
 //   await expect(loginPage.titleTextVerify()).toHaveText('Swag Labs');
 // });
 
-// test('Add a product', async () => {
+test('Add a product', async () => {
   
-//   await productPage.addProduct();
-//   // Add assertions to verify product addition if needed
-// });
+  await productPage.addProduct();
+  // Add assertions to verify product addition if needed
+});
