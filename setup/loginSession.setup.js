@@ -1,11 +1,9 @@
-const { test } = require('@playwright/test');
-const { LoginPage } = require('../pageobjects/LoginModule/loginPage');
+import {test, expect} from "@playwright/test"
+import { LoginPage } from "../tests/pageobjects/LoginModule/loginPage"
 import testConfig from "../testconfig"
-
-const loginData = require('../testdata/logindata.json');
+import loginData from "../tests/testdata/logindata.json"
 import {STORAGE_STATE} from "../playwright.config"
 
-const { expect } = require("@playwright/test")
 
 
 

@@ -1,6 +1,6 @@
 import { defineConfig } from '@playwright/test'
 const path = require('path');
-const testConfig = require('./testconfig');
+import testConfig from './testconfig'
 const ENV = process.env.ENV;
 const TEST_TYPE = process.env.TEST_TYPE
 const BROWSER_TYPE = process.env.BROWSER_TYPE
@@ -34,4 +34,4 @@ export default defineConfig({
     },
   ],
 });
-export { STORAGE_STATE };
+export { STORAGE_STATE }

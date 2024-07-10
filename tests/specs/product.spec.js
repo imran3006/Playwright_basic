@@ -1,7 +1,9 @@
-const { test, expect } = require('@playwright/test');
-const { ProductPage } = require('../pageobjects/productModule/productPage');
-const { LoginPage } = require('../pageobjects/LoginModule/loginPage');
-const testConfig = require('../../testconfig');
+import {test, expect} from "@playwright/test"
+import { LoginPage } from "../pageobjects/LoginModule/loginPage"
+import testConfig from "../../testconfig"
+import loginData from "../testdata/logindata.json"
+import { ProductPage } from '../pageobjects/productModule/productPage'
+
 
 let loginPage;
 let productPage;

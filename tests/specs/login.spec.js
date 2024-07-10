@@ -1,8 +1,9 @@
-const { test, expect } = require('@playwright/test')
-const { LoginPage } = require('../pageobjects/LoginModule/loginPage')
-const loginData = require('../testdata/logindata.json')
+import {test, expect} from "@playwright/test"
+import { LoginPage } from "../pageobjects/LoginModule/loginPage"
+import testConfig from "../../testconfig"
+import loginData from "../../tests/testdata/logindata.json"
 const { STORAGE_STATE } = require('../../playwright.config')
-const testConfig = require('../../testconfig')
+
 
 test('Browse websiteusing stored session', async ({ page }) => {
   const loginPage = new LoginPage(page);
